@@ -8,12 +8,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @font-face {
-        font-family: "StreetSoul";
-        src: url("public/fonts/StreetSoul.woff2") format("woff2");
+        font-family: 'StreetSoul';
+        src: url('public/fonts/StreetSoul.woff2') format('woff2');
       }
       @font-face {
-        font-family: "RokiestRegular";
-        src: url("public/fonts/RokiestRegular.woff2") format("woff2");
+        font-family: 'RokiestRegular';
+        src: url('public/fonts/RokiestRegular.woff2') format('woff2');
       }
 
       /* Estilos adicionales para ocultar elementos en pantallas pequeñas */
@@ -31,10 +31,9 @@
 
       .background {
         background-image:
-          linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)),
-          /* Degradado de abajo hacia arriba */
-            linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-          /* Degradado desde 135 grados */ url("/assets/DSC00361.jpg"); /* Imagen de fondo */
+        linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)), 
+        linear-gradient(135deg, rgba(0, 0, 0, 0.1), 
+        rgba(0, 0, 0, 0.1)), url('/assets/DSC00361.jpg');
         width: 100%;
         height: 100vh; /* Establece la altura para llenar la ventana */
         background-size: cover; /* Asegura que la imagen cubra todo el fondo */
@@ -50,9 +49,8 @@
         .background {
           background-image:
             linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)),
-            /* Degradado de abajo hacia arriba */
-              linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-            /* Degradado desde 135 grados */ url("/assets/DSC00361.jpg"); /* Imagen de fondo */
+            /* Degradado de abajo hacia arriba */ linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+            /* Degradado desde 135 grados */ url('/assets/DSC00361.jpg'); /* Imagen de fondo */
 
           background-size: cover, cover, cover; /* Asegura que los gradientes y la imagen cubran todo */
           background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -79,7 +77,7 @@
       }
 
       .underline-link::after {
-        content: ""; /* Necesario para que el pseudo-elemento aparezca */
+        content: ''; /* Necesario para que el pseudo-elemento aparezca */
         position: absolute; /* Posiciona el pseudo-elemento */
         left: 0; /* Alineado a la izquierda */
         bottom: 0; /* Alineado al fondo del texto */
@@ -107,10 +105,7 @@
   </head>
 
   <body class="bg-black">
-    <header
-      id="header-desktop"
-      class="z-50 font-RokiestRegular text-white fixed w-full text-md bg-[#000000e3]"
-    >
+    <header id="header-desktop" class="z-50 font-RokiestRegular text-white fixed w-full text-md bg-[#000000e3]">
       <nav>
         <div class="w-full flex rounded-full p-2 justify-between px-5 md:px-20">
           <div class="only-logo">
@@ -119,45 +114,25 @@
             </h1>
           </div>
           <div class="flex items-center">
-            <ul
-              class="flex justify-center items-center space-x-10 tracking-widest nav-items"
-            >
+            <ul class="flex justify-center items-center space-x-10 tracking-widest nav-items">
               <li><a href="#" class="underline-link">Recepción</a></li>
               <li><a href="#" class="underline-link">Personajes</a></li>
               <li><a href="#" class="underline-link">Créditos</a></li>
               <li><a href="#" class="underline-link">Contacto</a></li>
               <li>
-                <a
-                  href="#"
-                  class="blood-effect transition-colors duration-300 bg-[#d82323] p-2 px-3 rounded-md"
-                  >Ver Ahora</a
-                >
+                <a href="#" class="blood-effect transition-colors duration-300 bg-[#d82323] p-2 px-3 rounded-md">Ver Ahora</a>
               </li>
             </ul>
             <div class="nav-icon hidden">
               <div class="flex items-center">
-                <ul
-                  class="flex justify-center items-center space-x-9 tracking-widest"
-                >
+                <ul class="flex justify-center items-center space-x-9 tracking-widest">
                   <li>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="#fff"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M12 0a12 12 0 100 24A12 12 0 0012 0zm0 22a10 10 0 110-20 10 10 0 010 20zm-2-15h4v6h-4z"
-                      ></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24">
+                      <path d="M12 0a12 12 0 100 24A12 12 0 0012 0zm0 22a10 10 0 110-20 10 10 0 010 20zm-2-15h4v6h-4z"></path>
                     </svg>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      class="transition-colors duration-300 bg-[#d82323] p-2 px-3 rounded-md tracking-widest"
-                      >Ver Ahora</a
-                    >
+                    <a href="#" class="transition-colors duration-300 bg-[#d82323] p-2 px-3 rounded-md tracking-widest">Ver Ahora</a>
                   </li>
                 </ul>
               </div>
@@ -167,43 +142,20 @@
       </nav>
     </header>
     <div class="background">
-      <div
-        class="flex justify-start mx-auto xl:m-0 xl:items-center h-screen text-white items-end"
-        style="min-height: 600px;"
-      >
-        <div
-          class="flex flex-col justify-center items-start text-center w-full xl:w-1/2 mx-auto xl:ml-24 mb-5 xl:mb-0"
-        >
+      <div class="flex justify-start mx-auto xl:m-0 xl:items-center h-screen text-white items-end" style="min-height: 600px;">
+        <div class="flex flex-col justify-center items-start text-center w-full xl:w-1/2 mx-auto xl:ml-24 mb-5 xl:mb-0">
           <!-- Cambiado mr-24 a ml-24 -->
-          <h1
-            class="text-[5rem] sm:text-[9rem] 2xl:text-[13rem] font-StreetSoul leading-none"
-          >
-            Bastardos
-          </h1>
-          <p
-            class="text-[#bebebe] w-full text-center italic xl:text-left text-[1.2rem] sm:text-[1.8rem] 2xl:text-4xl md:w-full font-RokiestRegular tracking-widest mb-2 xl:mb-8"
-            style="margin-top: -2px;"
-          >
+          <h1 class="text-[5rem] sm:text-[9rem] 2xl:text-[13rem] font-StreetSoul leading-none">Bastardos</h1>
+          <p class="text-[#bebebe] w-full text-center italic xl:text-left text-[1.2rem] sm:text-[1.8rem] 2xl:text-4xl md:w-full font-RokiestRegular tracking-widest mb-2 xl:mb-8" style="margin-top: -2px;">
             <!-- Cambiado text-right a text-left -->
             El precio de los pecados
           </p>
-          <a
-            href="#"
-            class="mx-auto xl:m-0 text-md 2xl:text-xl font-RokiestRegular tracking-widest bg-[#ff00003a] rounded-md border border-[#a0262698] p-2 flex items-center gap-2 hover:bg-[#ff00005a] transition-colors duration-300"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
-              viewBox="0 0 6 7"
-              id="play"
-            >
+          <a href="#" class="mx-auto xl:m-0 text-md 2xl:text-xl font-RokiestRegular tracking-widest bg-[#ff00003a] rounded-md border border-[#a0262698] p-2 flex items-center gap-2 hover:bg-[#ff00005a] transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 6 7" id="play">
               <g fill="#fff" fill-rule="evenodd">
                 <g fill="#fff" transform="translate(-347 -3766)">
                   <g transform="translate(56 160)">
-                    <path
-                      d="M296.495 3608.573l-3.994-2.43c-.669-.408-1.501.107-1.501.926v4.862c0 .82.832 1.333 1.5.927l3.995-2.43c.673-.41.673-1.445 0-1.855"
-                    ></path>
+                    <path d="M296.495 3608.573l-3.994-2.43c-.669-.408-1.501.107-1.501.926v4.862c0 .82.832 1.333 1.5.927l3.995-2.43c.673-.41.673-1.445 0-1.855"></path>
                   </g>
                 </g>
               </g>
