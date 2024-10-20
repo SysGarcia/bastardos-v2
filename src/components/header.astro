@@ -1,0 +1,75 @@
+<header id="header-desktop" class="z-50 font-RokiestRegular text-white fixed w-full text-md bg-[#000000e5]">
+    <nav>
+      <div class="items_separation w-full flex rounded-full p-2 justify-between px-4 md:px-20">
+        <div class="only-logo">
+          <h1 class="text-5xl text-white font-StreetSoul">
+            <a href="#">B</a>
+          </h1>
+        </div>
+        <div class="flex items-center">
+          <ul class="hidden md:flex justify-center items-center space-x-10 tracking-widest nav-items">
+            <li><a href="#" class="underline-link">Recepción</a></li>
+            <li><a href="#" class="underline-link">Personajes</a></li>
+            <li><a href="#" class="underline-link">Créditos</a></li>
+            <li><a href="#" class="underline-link">Contacto</a></li>
+            <li>
+              <a href="#" class="blood-effect transition-colors duration-300 bg-[#d82323] p-2 px-3 rounded-md">Ver Ahora</a>
+            </li>
+          </ul>
+  
+          <!-- Botón que despliega el menú en móvil -->
+          <div class="nav-icon md:hidden" id="menu-toggle">
+            <ul class="flex justify-center items-center space-x-5 tracking-widest">
+              <li>
+                <a href="#" class="blood-effect transition-colors duration-300 bg-[#d82323] p-2 px-3 rounded-md">Ver Ahora</a>
+              </li>
+            <li>
+              <button class="flex justify-center items-center" onclick="toggleSideMenu()">
+              <svg style="transform: scaleX(-1);" class="w-7 h-7" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                <g fill="#fff" stroke="#fff">
+                  <path fill="#fff" fill-rule="evenodd" clip-rule="evenodd" d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z"></path>
+                </g>
+              </svg>
+            </button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  
+    <div id="side-menu" class="fixed top-0 right-0 w-2/3 h-full bg-[#000000f6] transform translate-x-full transition-transform duration-300 ease-in-out z-50">
+      <button class="absolute top-4 right-4 text-white" onclick="toggleSideMenu()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <ul class="flex flex-col items-center space-y-8 mt-16">
+        <li><a href="#" class="text-white text-xl">Recepción</a></li>
+        <li><a href="#" class="text-white text-xl">Personajes</a></li>
+        <li><a href="#" class="text-white text-xl">Créditos</a></li>
+        <li><a href="#" class="text-white text-xl">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
+  
+  <style>
+    @media (max-width: 768px) {
+      .nav-items {
+        display: none;
+      }
+      .nav-icon {
+        display: block;
+      }
+    }
+    
+    #side-menu.open {
+      transform: translateX(0);
+    }
+  </style>
+  
+  <script is:inline>
+    function toggleSideMenu() {
+      const sideMenu = document.getElementById('side-menu');
+      sideMenu.classList.toggle('open');
+    }
+  </script>
