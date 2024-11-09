@@ -1,0 +1,63 @@
+---
+import Header from '../components/header.astro';
+import NoiseBackground from '../components/NoiseBackground.astro';
+import Contact from '../components/contact.astro';
+---
+
+<style>
+/* Asegúrate de que el fondo abarque toda la pantalla */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Fondo de gradiente y ruido */
+.bg-noise-gradient {
+  background: linear-gradient(135deg, #333 0%, #1f0066 35%, #ffdd00 70%, #333 100%);
+  background-blend-mode: screen;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Asegura que el fondo esté detrás del contenido */
+}
+
+/* Efecto de ruido superpuesto */
+.bg-noise-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/public/assets/noise.png'); 
+  opacity: 0.1; 
+  pointer-events: none;
+  z-index: 0;
+}
+</style>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Bastardos 🚬</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Fondo de gradiente con ruido -->
+    <div class="bg-noise-gradient"></div>
+
+    <!-- Componentes principales -->
+    <NoiseBackground />
+    <Header />
+    <Contact />
+  </body>
+</html>

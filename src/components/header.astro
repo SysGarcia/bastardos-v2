@@ -1,4 +1,4 @@
-<header id="header-desktop" class="z-50 font-RokiestRegular text-white fixed w-full text-md bg-[#000000e5]">
+<header id="header-desktop" class="z-50 font-RokiestRegular text-white fixed w-full text-md bg-[#000000e5] ">
     <nav>
       <div class="items_separation w-full flex rounded-full p-2 justify-between px-4 md:px-20">
         <div class="only-logo">
@@ -7,13 +7,13 @@
           </h1>
         </div>
         <div class="flex items-center">
-          <ul class="hidden md:flex justify-center items-center space-x-10 tracking-widest nav-items">
-            <li><a href="#" class="underline-link">Recepción</a></li>
-            <li><a href="#" class="underline-link">Personajes</a></li>
-            <li><a href="#" class="underline-link">Créditos</a></li>
-            <li><a href="#" class="underline-link">Contacto</a></li>
+          <ul class="hidden md:flex justify-center items-center space-x-10 tracking-widest nav-items text-[15px]">
+            <li><a href="/" class="underline-link">Recepción</a></li>
+            <li><a href="/personajes" class="underline-link">Personajes</a></li>
+            <li><a href="/creditos" class="underline-link">Créditos</a></li>
+            <li><a href="/contacto" class="underline-link">Contacto</a></li>
             <li>
-              <a href="#" class="blood-effect transition-colors duration-300 bg-[rgb(112,54,129)] p-2 px-3 rounded-md">Ver Ahora</a>
+              <a href="#" class="blood-effect transition-colors duration-300 bg-[rgb(64,53,151)] p-2 px-3 rounded-md">Ver Ahora</a>
             </li>
           </ul>
   
@@ -43,16 +43,26 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
-      <ul class="flex flex-col items-center space-y-8 mt-16">
-        <li><a href="#" class="text-white text-xl">Recepción</a></li>
-        <li><a href="#" class="text-white text-xl">Personajes</a></li>
-        <li><a href="#" class="text-white text-xl">Créditos</a></li>
-        <li><a href="#" class="text-white text-xl">Contacto</a></li>
+      <ul class="flex flex-col items-center space-y-8 mt-16 text-xl">
+        <li><a href="/" class="text-white">Recepción</a></li>
+        <li><a href="/personajes" class="text-white">Personajes</a></li>
+        <li><a href="/creditos" class="text-white">Créditos</a></li>
+        <li><a href="/contacto" class="text-white">Contacto</a></li>
       </ul>
     </div>
   </header>
   
   <style>
+    @font-face {
+      font-family: 'StreetSoul';
+      src: url('/fonts/StreetSoul.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'RokiestRegular';
+      src: url('/fonts/RokiestRegular.woff2') format('woff2');
+    }
+
     @media (max-width: 768px) {
       .nav-items {
         display: none;
